@@ -88,45 +88,113 @@
 //        person1.print();
 //    }
 
-class Person {
-    private int age;
-    private String name;
-    private static int s;
-
-    //这是一个构造方法
-    Person() {
-        System.out.println("构造方法");
-    }
-    //这是一个实例代码块
-    {
-        System.out.println("实例代码块");
-    }
-    //这是一个静态代码块
-    static {
-        s++;
-        System.out.println("静态代码块");
-    }
-    //打印方法
-    public void print() {
-        //System.out.println("age:" + age+" name:"+name);
-        System.out.println("静态成员变量s="+s);
-    }
-}
-public class TestDemo {
-    public static void main(String[] args) {
-        //new一个对象
-        Person person = new Person();
-        //打印
-        person.print();
-        System.out.println("---------");
-        //再new一个对象
-        Person person1 = new Person();
-        person1.print();
-    }
-}
+//class Person {
+//    private int age;
+//    private String name;
+//    //这是一个构造方法
+//    Person() {
+//        System.out.println("构造方法");
+//    }
+//    //这是一个实例代码块
+//    {
+//        System.out.println("实例代码块");
+//    }
+//
+//    //这是一个静态代码块
+//    static {
+//        s = 2;
+//        System.out.println("静态代码块");
+//    }
+//    private static int s;
+//
+//
+//
+//    //打印方法
+//    public void print() {
+//        //System.out.println("age:" + age+" name:"+name);
+//        System.out.println("静态成员变量s="+s);
+//    }
+//}
+//public class TestDemo {
+//    public static void main(String[] args) {
+//        //new一个对象
+//        Person person = new Person();
+//        //打印
+//        person.print();
+//        System.out.println("---------");
+//        //再new一个对象
+//        Person person1 = new Person();
+//        person1.print();
+//    }
+//}
 //
 //public class TestDemo {
 //    public static void main(String[] args) {
 //        System.out.println("hello world");
 //    }
 //}
+//class Person {
+//    private String name;
+//    private int age;
+//    public Person(String name,int age) {
+//        this.age = age;
+//        this.name = name;
+//    }
+//    public void show() {
+//        System.out.println("name:"+name+" " + "age:"+age);
+//    } }
+//public class TestDemo {
+//    public static void main(String[] args) {
+//        Person person = new Person("小明",18);
+//        person.show();
+//        System.out.println(person);
+//    }
+//}
+//class Person {
+//    private String name;
+//    private int age;
+//
+//    public Person(String name, int age) {
+//        this.age = age;
+//        this.name = name;
+//    }
+//
+//    public void print() {
+//        System.out.println("name:" + name + " " + "age:" + age);
+//    }
+//
+//    //重写Object的toString方法 @Override
+//    public String toString() {
+//
+//        return "Person{" +
+//                "name='" + name + '\'' +
+//                ", age=" + age +
+//                '}';
+//    }
+//}
+//public class TestDemo {
+//    public static void main(String[] args) {
+//        Person person = new Person("小明", 18);
+//        person.print();
+//        System.out.println(person);
+//    }
+//}
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.age = age;
+        this.name = name;
+    }
+
+    public void print() {
+        System.out.println("name:" + name + " " + "age:" + age);
+    }
+}
+public class TestDemo {
+    public static void main(String[] args) {
+        //这是一个匿名对象
+        new Person("小明", 18).print();
+    }
+}
